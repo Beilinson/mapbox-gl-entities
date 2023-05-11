@@ -1,0 +1,59 @@
+{
+  "name": "mapbox-gl-entities",
+  "version": "0.0.1",
+  "description": "A library for working with GeoJSON geometries as entities",
+  "type": "module",
+  "main": "dist/mapbox-gl-entities.min.js",
+  "module": "lib/mapbox-gl-entities.js",
+  "typings": "lib/mapbox-gl-entities.d.ts",
+  "types": "lib/mapbox-gl-entities.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beilinson/mapbox-gl-entities.git"
+  },
+  "files": [
+    "src",
+    "lib",
+    "dist"
+  ],
+  "keywords": [
+    "mapbox",
+    "gl",
+    "js",
+    "layer",
+    "group",
+    "geojson"
+  ],
+  "author": "Adam Beili <adam.v.beili@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Beilinson/mapbox-gl-entities/issues"
+  },
+  "homepage": "https://github.com/Beilinson/mapbox-gl-entities#readme",
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.7",
+    "@types/mapbox-gl": "^2.7.10",
+    "@types/uuid": "^9.0.1",
+    "mapbox-gl": "2.x",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.21.0",
+    "rollup-plugin-dts": "^5.3.0",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "mapbox-gl": "2.x"
+  },
+  "dependencies": {
+    "@mapbox/polylabel": "^1.0.2",
+    "@turf/turf": "^6.5.0",
+    "@types/polylabel": "^1.0.5",
+    "polylabel": "^1.1.0",
+    "uuid": "^9.0.0"
+  }
+}
