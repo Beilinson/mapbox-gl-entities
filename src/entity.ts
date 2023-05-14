@@ -6,6 +6,7 @@ import { GeoJSONSource } from 'mapbox-gl';
 import { bbox } from '@turf/turf';
 import { BBox2d } from '@turf/helpers/dist/js/lib/geojson';
 import { getGeoJsonId, getVisualCenter } from './utils';
+import { GeometryConverter } from './geometry-converter';
 
 export type EntityProperties = SimpleSpecDesign & SimpleSpecLabel & Properties;
 
@@ -71,5 +72,13 @@ export class Entity implements Feature<Geometry, EntityProperties> {
     } else {
       this.map.fitBounds(this.bbox!);
     }
+  }
+
+  public toKml(): string {
+    return GeometryConverter.geoJSONToKml(this);
+  }
+
+  public toWkt(): string {
+    return GeometryConverter.geoJSONToWkt(this);
   }
 }

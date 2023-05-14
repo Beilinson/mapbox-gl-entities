@@ -38,7 +38,9 @@
   "devDependencies": {
     "@types/lodash-es": "^4.17.7",
     "@types/mapbox-gl": "^2.7.10",
+    "@types/polylabel": "^1.0.5",
     "@types/uuid": "^9.0.1",
+    "@types/wellknown": "^0.5.4",
     "mapbox-gl": "2.x",
     "rimraf": "^5.0.0",
     "rollup": "^3.21.0",
@@ -51,9 +53,15 @@
   },
   "dependencies": {
     "@mapbox/polylabel": "^1.0.2",
+    "@mapbox/togeojson": "^0.16.0",
+    "@placemarkio/tokml": "^0.3.3",
+    "@tmcw/togeojson": "^5.6.1",
     "@turf/turf": "^6.5.0",
-    "@types/polylabel": "^1.0.5",
+    "betterknown": "^1.0.3",
     "polylabel": "^1.1.0",
-    "uuid": "^9.0.0"
+    "togeojson": "^0.16.0",
+    "tokml": "^0.4.0",
+    "uuid": "^9.0.0",
+    "wellknown": "^0.5.0"
   }
 }
